@@ -14,14 +14,16 @@ import javax.annotation.Resource;
  * @Author Robert
  * @create 2021/6/15 19:29
  * @Version 1.0
- * @Description:
+ * @Description: 订单模块 controller
  */
 
 @RestController
 @Slf4j
 public class OrderController {
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+//    public static final String PAYMENT_URL = "http://localhost:8001"; //eureka 单机 配置
+
+    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";//eureka 集群配置
 
     @Resource
     private RestTemplate restTemplate;

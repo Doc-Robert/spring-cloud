@@ -1,6 +1,6 @@
 #springcloud yml config
 server:
-  port: 8001
+  port: 8002
 
 
 spring:
@@ -24,8 +24,8 @@ eureka:
 #      defaultZone: http://localhost:7001/eureka  #单机版 eureka
       defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka #集群版
   instance:
-      instance-id: payment8001 #添加此处
-      prefer-ip-address: true #访问路劲可以显示ip地址
+    instance-id: payment8002 #添加此处 设置服务不暴露本机地址
+    prefer-ip-address: true #访问路劲可以显示ip地址
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
